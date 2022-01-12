@@ -19,22 +19,21 @@ public abstract class Command {
 
     private static final Pattern OPTION_PATTERN = Pattern.compile("([<\\[])([a-zA-Z0-9]+)(?:[=]'([^'\\\\]*(?:\\\\.[^'\\\\]*)*)')?(?:[:]([a-zA-Z0-9]+))?[>\\]]");
 
-    private static final Map<String, OptionType> OPTION_TYPES = new HashMap<>() {{
-        put("str", OptionType.STRING);
-        put("int", OptionType.INTEGER);
-        put("bool", OptionType.BOOLEAN);
-        put("user", OptionType.USER);
-        put("channel", OptionType.CHANNEL);
-        put("role", OptionType.ROLE);
-        put("mentionable", OptionType.MENTIONABLE);
-        put("number", OptionType.NUMBER);
-    }};
+    private static final Map<String, OptionType> OPTION_TYPES = new HashMap<>();
 
     private final CommandInfo commandInfo;
     private CommandRegistry commandRegistry;
     private SlashCommandEvent currentEvent;
 
     public Command() {
+        OPTION_TYPES.put("str", OptionType.STRING);
+        OPTION_TYPES.put("int", OptionType.INTEGER);
+        OPTION_TYPES.put("bool", OptionType.BOOLEAN);
+        OPTION_TYPES.put("user", OptionType.USER);
+        OPTION_TYPES.put("channel", OptionType.CHANNEL);
+        OPTION_TYPES.put("role", OptionType.ROLE);
+        OPTION_TYPES.put("mentionable", OptionType.MENTIONABLE);
+        OPTION_TYPES.put("number", OptionType.NUMBER);
         if (this.getClass().isAnnotationPresent(CommandInfo.class)) {
             this.commandInfo = this.getClass().getAnnotation(CommandInfo.class);
         } else {

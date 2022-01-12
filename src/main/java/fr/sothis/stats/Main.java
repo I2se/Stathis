@@ -45,7 +45,7 @@ public class Main {
 
         CommandRegistry commandRegistry = new CommandRegistry(jda);
         commandRegistry.registerDefaults();
-        commandRegistry.registerAllCommandsIn(StatsCommand.class.getPackageName());
+        commandRegistry.registerCommand(StatsCommand.class);
         commandRegistry.updateDiscord();
 
         jda.addEventListener(commandRegistry);

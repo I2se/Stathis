@@ -16,7 +16,6 @@ fr\sothis\stats\commands\manager\arg\number\ShortAR.class
 fr\sothis\stats\commands\manager\arg\discord\UserAR.class
 fr\sothis\stats\commands\manager\utils\Perms.class
 fr\sothis\stats\Main.class
-fr\sothis\stats\commands\manager\Command$1.class
 fr\sothis\stats\commands\manager\arg\discord\GuildChannelAR.class
 fr\sothis\stats\commands\manager\arg\number\IntegerAR.class
 fr\sothis\stats\commands\stats\StatsCommand.class

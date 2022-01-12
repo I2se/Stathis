@@ -59,7 +59,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        fr.sothis.nov.Main
+                                        fr.sothis.stats.Main
                                     </mainClass>
                                 </manifest>
                             </archive>
